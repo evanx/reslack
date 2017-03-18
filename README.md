@@ -25,6 +25,8 @@ The implementation logs the latest error into Redis, according to the client ID.
     multi.sadd('reconsole:error:s', clientId);
 ```
 
+e.g. see Uses application archetype: https://github.com/evanx/reconsole
+
 This service will `POST` alerts to a Slack channel, e.g. in collaboration with `reconsole.`
 
 
@@ -155,7 +157,7 @@ See `lib/main.js` https://github.com/evanx/reslack/blob/master/lib/main.js
     }
 ```
 
-Uses application archetype: https://github.com/evanx/redis-app
+Uses application archetype: https://github.com/evanx/redis-koa-app
 
 
 <hr>
