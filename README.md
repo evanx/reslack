@@ -2,7 +2,7 @@
 
 Notifications via Redis to Slack channel via Slackbot.
 
-<img src='https://raw.githubusercontent.com/evanx/rejson/master/docs/readme/images/main.png'>
+<img src='https://raw.githubusercontent.com/evanx/reslack/master/docs/readme/images/main.png'>
 
 
 ## Use case
