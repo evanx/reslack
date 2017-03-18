@@ -2,6 +2,9 @@
 
 Notifications via Redis to Slack channel via Slackbot.
 
+<img src='https://raw.githubusercontent.com/evanx/rejson/master/docs/readme/images/main.png'>
+
+
 ## Use case
 
 We wish to send alerts for application errors to a Slack channel.
