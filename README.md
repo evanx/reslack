@@ -116,7 +116,7 @@ We can build as follows:
 ```shell
 docker build -t reslack https://github.com/evanx/reslack.git
 ```
-to tagged the image as `reslack`
+where the image is tagged as `reslack`
 
 Then for example, we can run on the host's Redis as follows:
 ```shell
