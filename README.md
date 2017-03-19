@@ -36,8 +36,6 @@ Having pushed errors into Redis, the service in this repo is used to HTTP `POST`
 See `lib/spec.js` https://github.com/evanx/reslack/blob/master/lib/spec.js
 
 ```javascript
-module.exports = pkg => ({
-    description: pkg.description,
     env: {
         redisHost: {
             description: 'the Redis host',
@@ -76,7 +74,10 @@ module.exports = pkg => ({
             unit: 'ms',
             default: 2000
         }
-    },
+    }
+```
+Our `spec` also exposes the Redis keys used by this service:
+```javascript    
     redisK: config => ({
         reqS: {
             key: `${config.redisNamespace}:req:s`
@@ -97,7 +98,6 @@ module.exports = pkg => ({
             key: `${config.redisNamespace}:error:count:h`
         }
     })
-});
 ```
 
 ## Docker
