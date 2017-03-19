@@ -16,13 +16,13 @@ Consider the following common error logging method.
     logger.error(err);
 ```
 
-The implementation logs the latest error into Redis, according to the client ID.
+Consider a `logger` implementation as follows that logs the latest error into Redis, according to the ID of the service that creates the `logger`
 ```javascript
-    multi.hmset(`reconsole:error:${clientId}:h`, {
+    multi.hmset(`reconsole:error:${serviceId}:h`, {
         time: new Date().toISOString(),
         message: err.message
     });
-    multi.sadd('reconsole:error:s', clientId);
+    multi.sadd('reconsole:error:s', serviceId);
 ```
 
 For example see: https://github.com/evanx/reconsole
