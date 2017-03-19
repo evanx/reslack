@@ -16,7 +16,7 @@ Consider the following common error logging method.
     logger.error(err);
 ```
 
-Consider a logger implementation as follows that logs the latest error into Redis, according to the ID of the service that creates the `logger`
+Consider a `logger` implementation as follows that logs the latest error into Redis, according to the ID of the service that creates the `logger`
 ```javascript
     multi.hmset(`reconsole:error:${serviceId}:h`, {
         time: new Date().toISOString(),
