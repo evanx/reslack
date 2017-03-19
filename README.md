@@ -27,7 +27,7 @@ Consider a `logger` implementation as follows that logs the latest error into Re
 
 For example see: https://github.com/evanx/reconsole
 
-Having pushed errors into Redis, the service in this repo is used to `HTTP POST` alerts to a Slack channel.
+Having pushed errors into Redis, the service in this repo is used to HTTP `POST` alerts to a Slack channel.
 
 
 ## Configuration
