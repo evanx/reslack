@@ -25,9 +25,9 @@ The implementation logs the latest error into Redis, according to the client ID.
     multi.sadd('reconsole:error:s', clientId);
 ```
 
-e.g. see Uses application archetype: https://github.com/evanx/reconsole
+For example see: https://github.com/evanx/reconsole
 
-This service will `POST` alerts to a Slack channel, e.g. in collaboration with `reconsole.`
+Having pushed errors into Redis, the service in this repo is used to `HTTP POST` alerts to a Slack channel.
 
 
 ## Configuration
