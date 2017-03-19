@@ -122,7 +122,9 @@ Then for example, we can run on the host's Redis as follows:
 ```shell
 docker run --network=host -e slackUrl=$SLACK_URL reslack
 ```
-where `--network-host` connects the container to your `localhost` bridge. The default Redis host `localhost` works in that case.
+where we have exported our secret `SLACK_URL` for our team's Slackbot.
+
+Note `--network-host` connects the container to your `localhost` bridge. The default Redis host `localhost` works in that case.
 
 Since the containerized app has access to the host's Redis instance, you should inspect the source.
 
