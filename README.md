@@ -24,6 +24,7 @@ Consider a logger implementation as follows that logs the latest error into Redi
     });
     multi.sadd('reconsole:error:s', serviceId);
 ```
+where alteratively Redis pubsub could be used or the event pushed to a list.
 
 For example see: https://github.com/evanx/reconsole
 
