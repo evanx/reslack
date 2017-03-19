@@ -19,7 +19,7 @@ Consider the following common error logging method.
 The implementation logs the latest error into Redis, according to the client ID.
 ```javascript
     multi.hmset(`reconsole:error:${clientId}:h`, {
-        time: new Date(timestamp).toISOString(),
+        time: new Date().toISOString(),
         message: err.message
     });
     multi.sadd('reconsole:error:s', clientId);
